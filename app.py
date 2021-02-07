@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, url_for
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
+from wtforms import StringField, SubmitField, RadioField
 from wtforms.fields.html5 import EmailField
 from wtforms import validators
 from modules import get_names
@@ -23,6 +23,7 @@ class NameForm(FlaskForm):
     email = EmailField('Your email', [validators.DataRequired(), validators.Email()])
     advisor_name = StringField('What is your advisor\'s name?', validators=[validators.InputRequired('Please enter your name.')])
     advisor_email = EmailField('What is your advisor\'s email?', [validators.DataRequired(), validators.Email()])
+    example = RadioField('Label', choices=[('value','description'),('value_two','whatever')])
 
     submit = SubmitField('Submit')
 

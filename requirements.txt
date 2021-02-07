@@ -1,0 +1,11 @@
+decorator==4.4.2
+email-validator==1.1.2
+entrypoints==0.3
+Flask==1.1.2
+Flask-Bootstrap==3.3.7.1
+Flask-WTF==0.14.3
+Frozen-Flask==0.15
+html5lib @ file:///tmp/build/80754af9/html5lib_1593446221756/work
+jedi @ file:///opt/concourse/worker/volumes/live/5006b7b5-a924-4788-6cfe-ae05d8be8830/volume/jedi_1606932947370/work
+Jinja2==2.11.2
+WTForms==2.3.3

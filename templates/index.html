@@ -22,9 +22,20 @@ CoMM advising
 
       <h1 class="pt-5 pb-2">Welcome to CoMM advising questionaire!</h1>
 
-      <p class="lead">Fill out the form and it will be emailed to your advisor before your advisor meeting.</p>
+	  <p class="lead">Fill out the form and it will be emailed to your advisor before your advisor meeting.</p>
+	  
+	  {{ wtf.quick_form(form) }}
 
-      {{ wtf.quick_form(form) }}
+      <form class="form form-horizontal" method="post" role="form">
+		{{ form.hidden_tag() }}
+		{{ wtf.form_errors(form, hiddens="only") }}
+	  
+		{{ wtf.form_field(form.name) }}
+		{{ wtf.form_field(form.email) }}
+		{{ wtf.form_field(form.advisor_name) }}
+		{{ wtf.form_field(form.advisor_email) }}
+		{{ wtf.form_field(form.submit)}}
+	  </form>
 
       <p class="pt-5"><strong>{{ message }}</strong></p>
 
